@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+}
+
+root {
+  --prime-color: #55c175;
+  --prime-dark-color: #42b463;
+  --second-color: #ffe600;
+  --third-color: #4bc7eb;
+  --black-color: #000;
+  --white-color: #fff;
+  --body-color: #191919;
+}
+
+body {
+  background-color: var(--body-color);
+}
+/* START STYLING THE NAV*****************************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  width: 100%;
+  height: 90px;
+}
+
+.bars {
+  width: 50px;
+  width: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--prime-color);
+  color: var(--white-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+
+.bars:hover {
+  transform: scale(0.8);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.logo a {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu li a {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu li a::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: var(--prime-color);
+  transition: 0.3s;
+}
+
+.menu li a:hover a:efter {
+  width: 100%;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--prime-color);
+  color: var(--white-color);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button i {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:hover i {
+  transform: rotate(180deg);
+}
+/* End STYLING THE NAV*******************************/
