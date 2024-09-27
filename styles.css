@@ -10,7 +10,7 @@
   scroll-behavior: smooth;
 }
 
-root {
+:root {
   --prime-color: #55c175;
   --prime-dark-color: #42b463;
   --second-color: #ffe600;
@@ -22,7 +22,21 @@ root {
 
 body {
   background-color: var(--body-color);
+  color: var(--white-color);
+  overflow-x: hidden;
 }
+
+/* ReUsable SECTION class *******************/
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 8%;
+}
+img {
+  height: 100%;
+}
+
 /* START STYLING THE NAV*****************************/
 nav {
   display: flex;
@@ -42,7 +56,7 @@ nav {
   align-items: center;
   background-color: var(--prime-color);
   color: var(--white-color);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s;
   display: none;
@@ -75,8 +89,9 @@ nav {
 .menu li a {
   color: var(--white-color);
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
   position: relative;
+  transition: 0.3s;
 }
 
 .menu li a::after {
@@ -85,13 +100,17 @@ nav {
   top: 100%;
   left: 0;
   width: 0;
-  height: 0;
+  height: 2px;
   background-color: var(--prime-color);
   transition: 0.3s;
 }
 
-.menu li a:hover a:efter {
+.menu li:hover a:after {
   width: 100%;
+}
+
+.menu li:hover a {
+  color: var(--prime-color);
 }
 
 button {
@@ -100,7 +119,7 @@ button {
   border-radius: 10px;
   background-color: var(--prime-color);
   color: var(--white-color);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,4 +140,2539 @@ button:hover {
 button:hover i {
   transform: rotate(180deg);
 }
+
+.download-button {
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: medium;
+}
 /* End STYLING THE NAV*******************************/
+
+/* START STYLING THE Hero Sec*******************************/
+.hero {
+  width: 90%; /*adjustable*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.6% 8%;
+  position: relative;
+  /* overflow: hidden; */
+}
+.content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.content h2 {
+  font-size: 4rem;
+  color: var(--second-color);
+  font-weight: 600;
+  line-height: 4.3rem;
+}
+
+.content h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 6.5rem;
+}
+
+.content h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.3rem;
+  color: var(--prime-color);
+}
+
+.content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 80%;
+  margin: 20px 0;
+}
+
+.image {
+  width: 40%;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.image img {
+  border-radius: 20%;
+  object-fit: contain;
+}
+
+.det_box {
+  position: absolute;
+  top: 70%;
+  left: -0;
+  width: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.det_box i {
+  font-size: 3rem;
+  color: var(--prime-color);
+}
+
+.det_box_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.det_box_info h2 {
+  font-weight: 500;
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 30px !important;
+  background-color: var(--white-color);
+  padding: 15px;
+}
+
+.elem1 {
+  top: 8%;
+  left: 15%;
+}
+
+.elem2 {
+  top: 5%;
+  right: -50%;
+}
+
+.elem3 {
+  top: 70%;
+  right: -40%;
+}
+
+/* hero backgrounds shapes ****************/
+.shape1 {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 30%;
+  z-index: -1;
+}
+
+.shape2 {
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  width: 70%;
+  z-index: -1;
+}
+
+.shape1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  z-index: -1;
+}
+
+.shape3 {
+  border-radius: 50% !important;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 720px;
+  opacity: 0.16;
+  z-index: -1;
+}
+
+.shape4 {
+  position: absolute;
+  top: -10%;
+  left: 80%;
+  width: 800px;
+  height: 600px;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.shape5 {
+  position: absolute;
+  top: 20%;
+  left: +43%;
+  height: 580px;
+  opacity: 0.04;
+  z-index: 1;
+}
+/* End STYLING THE Hero Sec*******************************/
+/* Start STYLING THE ADVANTAGE SECTION **************/
+.my_advantage {
+  width: 100%;
+  justify-content: space-between;
+  padding: 8%;
+}
+
+.advantage_exp {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #2e2c1f, #1b1b19);
+  width: 400px;
+  height: 450px;
+  border-radius: 10px;
+}
+.exp_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 25%;
+}
+.exp_box h1 {
+  font-size: 8rem;
+  font-weight: 500;
+  color: var(--second-color);
+}
+.exp_box p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.exp_small_box {
+  width: 350px;
+  padding: 7%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+  top: 35%;
+  left: 20%;
+}
+
+.exp_small_box:after {
+  border-radius: 5px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #939393a1, rgba(28, 26, 26, 0.3));
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.exp_small_box:before {
+  border-radius: 5px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  background-color: #2d2b1f;
+  z-index: -1;
+}
+
+.exp_small_box h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--prime-color);
+}
+.exp_small_box p {
+  font-weight: 500;
+}
+.advantage_content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.advantage_content h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.advantage_content p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  width: 80%;
+}
+/* Start advantages cards 6cards in flex as well ************/
+.advantage_cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.advantage_card {
+  width: 300px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  position: relative;
+  border-radius: 10px;
+  z-index: 2;
+}
+.advantage_card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 230, 0, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  );
+  z-index: -2;
+}
+.advantage_card:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 97%;
+  height: 95%;
+  border-radius: 10px;
+  background: #1f1e1d;
+  z-index: -1;
+}
+.advantage_card h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+.advantage_card p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.advantage_card:nth-child(1) p {
+  color: var(--second-color);
+}
+
+.advantage_card:nth-child(2) p {
+  color: var(--prime-color);
+}
+
+.advantage_card:nth-child(3) p {
+  color: #d73a26;
+}
+
+.advantage_card:nth-child(4) p {
+  color: #f1651a;
+}
+
+.advantage_card:nth-child(5) p {
+  color: var(--third-color);
+}
+
+.advantage_card:nth-child(6) p {
+  color: #ad08cc;
+}
+
+.advantage_card:nth-child(2):after {
+  background: linear-gradient(
+    180deg,
+    rgba(89, 195, 120, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(3):after {
+  background: linear-gradient(
+    180deg,
+    rgba(221, 88, 79, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(4):after {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 154, 0, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(5):after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 169, 255, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(6):after {
+  background: linear-gradient(
+    180deg,
+    rgba(158, 0, 255, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+
+.advantage_card:nth-child(1):hover h2 {
+  color: var(--second-color);
+}
+.advantage_card:nth-child(2):hover h2 {
+  color: var(--prime-color);
+}
+.advantage_card:nth-child(3):hover h2 {
+  color: #d73a26;
+}
+.advantage_card:nth-child(4):hover h2 {
+  color: #f1651a;
+}
+.advantage_card:nth-child(5):hover h2 {
+  color: var(--third-color);
+}
+.advantage_card:nth-child(6):hover h2 {
+  color: #ad08cc;
+}
+
+.adv_shape {
+  position: absolute;
+  z-index: -1;
+}
+
+.adv_shape1 {
+  top: 10%;
+  left: -10%;
+  width: 40%;
+}
+
+.adv_shape2 {
+  top: 10%;
+  right: 0%;
+  width: 40%;
+}
+
+.adv_shape3 {
+  bottom: -30%;
+  left: 0%;
+  width: 42%;
+  opacity: 0.7;
+}
+
+.adv_shape4 {
+  top: 10%;
+  right: 0%;
+  width: 40%;
+}
+/* End advantages cards 6cards in flex as well ************/
+
+/* End STYLING THE ADVANTAGE SECTION ****************/
+/* START STYLIiNG SERVICES SEC **********************/
+.services {
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #222121;
+}
+
+.service_shape {
+  position: absolute;
+  top: 15%;
+  right: -10%;
+  width: 40%;
+  opacity: 0.4;
+}
+
+.service_shape2 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 40%;
+  opacity: 0.2;
+}
+.headings {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.headings h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+.headings p {
+  font-size: 1rem;
+  font-weight: 300;
+  width: 80%;
+}
+/* start sTyling the services section btns2 ***************/
+
+.service_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.btn2 {
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+  background-color: #373737;
+  color: var(--white-color);
+}
+.btn2:active,
+.btn2:focus {
+  background-color: transparent;
+  color: var(--second-color);
+  border: 1px solid var(--white-color);
+}
+.btn:hover {
+  transform: scale(1);
+}
+
+/* End sTyling the services section btns2 ***************/
+/* STYLING SERVICES CARD 1 in GRID*********************/
+
+.services_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service_container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+/* le conteneur est en grid mais le contenu des cards sont en fleX */
+.service_card {
+  background-color: #232221;
+  width: 400px !important; /*!important si nécessaire*/
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(131, 131, 131, 0.5);
+}
+
+.service_card .service_icon {
+  font-size: 3.5rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #373737;
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.service_card:hover .service_icon {
+  background-color: var(--prime-color);
+  color: var(--white-color);
+}
+
+.service_card h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.service_card p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.service_card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service_card a {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.service_card a i {
+  font-size: 1.2rem;
+}
+.service_card a:hover {
+  color: var(--second-color);
+  letter-spacing: 2px;
+}
+/* End Styling SERVICES CARD 1 in GRID****************/
+
+.service_2,
+.service_3 {
+  display: none;
+}
+
+/* Start Work EXPERIENCE SEC **************************-->*/
+.work_experience {
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.work_box_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.work_box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+  background-color: #282828;
+  padding: 1.2% 0%;
+  border: 1px solid transparent;
+}
+
+.work_box h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.work_box_img {
+  width: 80px;
+  height: 80px;
+}
+
+.work_det {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.work_det {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.work_det h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.work_det p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #d73a26;
+}
+
+.work_det p span {
+  color: #999;
+}
+
+.work_box a {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.work_box a i {
+  font-size: 1.2rem;
+}
+.work_box a:hover {
+  color: var(--second-color);
+  letter-spacing: 2px;
+}
+
+.work_box:hover {
+  border: 1px solid rgba(131, 131, 131, 0.5);
+}
+.work_shape {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 850px;
+  opacity: 0.2;
+  z-index: -1;
+}
+/* End Styling Work EXPERIENCE SEC **************************-->*/
+/* End styling services SEC *************************/
+
+/* Start Styling Recent Work SEC ********************/
+.recent_work {
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 5% 12%;
+}
+.headings2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.head_content h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+.head_content p {
+  width: 80%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.heading2 i {
+  font-size: 3.5rem;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  background-color: #373737;
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  position: relative;
+}
+
+.heading2 i:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105%;
+  height: 105%;
+  border: 2px dashed rgba(131, 131, 131, 0.5);
+  border-radius: 100%;
+}
+/* End Styling Recent Work SEC **********************/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+}
+
+:root {
+  --prime-color: #55c175;
+  --prime-dark-color: #42b463;
+  --second-color: #ffe600;
+  --third-color: #4bc7eb;
+  --black-color: #000;
+  --white-color: #fff;
+  --body-color: #191919;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--white-color);
+  overflow-x: hidden;
+}
+
+/* ReUsable SECTION class *******************/
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 8%;
+}
+img {
+  height: 100%;
+}
+
+/* START STYLING THE NAV*****************************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  width: 100%;
+  height: 90px;
+}
+
+.bars {
+  width: 50px;
+  width: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--prime-color);
+  color: var(--white-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+
+.bars:hover {
+  transform: scale(0.8);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.logo a {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu li a {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  position: relative;
+  transition: 0.3s;
+}
+
+.menu li a::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--prime-color);
+  transition: 0.3s;
+}
+
+.menu li:hover a:after {
+  width: 100%;
+}
+
+.menu li:hover a {
+  color: var(--prime-color);
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--prime-color);
+  color: var(--white-color);
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button i {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:hover i {
+  transform: rotate(180deg);
+}
+
+.download-button {
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: medium;
+}
+/* End STYLING THE NAV*******************************/
+
+/* START STYLING THE Hero Sec*******************************/
+.hero {
+  width: 90%; /*adjustable*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.6% 8%;
+  position: relative;
+  /* overflow: hidden; */
+}
+.content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.content h2 {
+  font-size: 4rem;
+  color: var(--second-color);
+  font-weight: 600;
+  line-height: 4.3rem;
+}
+
+.content h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 6.5rem;
+}
+
+.content h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.3rem;
+  color: var(--prime-color);
+}
+
+.content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 80%;
+  margin: 20px 0;
+}
+
+.image {
+  width: 40%;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.image img {
+  border-radius: 20%;
+  object-fit: contain;
+}
+
+.det_box {
+  position: absolute;
+  top: 70%;
+  left: -0;
+  width: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.det_box i {
+  font-size: 3rem;
+  color: var(--prime-color);
+}
+
+.det_box_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.det_box_info h2 {
+  font-weight: 500;
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 30px !important;
+  background-color: var(--white-color);
+  padding: 15px;
+}
+
+.elem1 {
+  top: 8%;
+  left: 15%;
+}
+
+.elem2 {
+  top: 5%;
+  right: -50%;
+}
+
+.elem3 {
+  top: 70%;
+  right: -40%;
+}
+
+/* hero backgrounds shapes ****************/
+.shape1 {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 30%;
+  z-index: -1;
+}
+
+.shape2 {
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  width: 70%;
+  z-index: -1;
+}
+
+.shape1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  z-index: -1;
+}
+
+.shape3 {
+  border-radius: 50% !important;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 720px;
+  opacity: 0.16;
+  z-index: -1;
+}
+
+.shape4 {
+  position: absolute;
+  top: -10%;
+  left: 80%;
+  width: 800px;
+  height: 600px;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.shape5 {
+  position: absolute;
+  top: 20%;
+  left: +43%;
+  height: 580px;
+  opacity: 0.04;
+  z-index: 1;
+}
+/* End STYLING THE Hero Sec*******************************/
+/* Start STYLING THE ADVANTAGE SECTION **************/
+.my_advantage {
+  width: 100%;
+  justify-content: space-between;
+  padding: 8%;
+}
+
+.advantage_exp {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #2e2c1f, #1b1b19);
+  width: 400px;
+  height: 450px;
+  border-radius: 10px;
+}
+.exp_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 25%;
+}
+.exp_box h1 {
+  font-size: 8rem;
+  font-weight: 500;
+  color: var(--second-color);
+}
+.exp_box p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.exp_small_box {
+  width: 350px;
+  padding: 7%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+  top: 35%;
+  left: 20%;
+}
+
+.exp_small_box:after {
+  border-radius: 5px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #939393a1, rgba(28, 26, 26, 0.3));
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.exp_small_box:before {
+  border-radius: 5px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  background-color: #2d2b1f;
+  z-index: -1;
+}
+
+.exp_small_box h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--prime-color);
+}
+.exp_small_box p {
+  font-weight: 500;
+}
+.advantage_content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.advantage_content h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.advantage_content p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  width: 80%;
+}
+/* Start advantages cards 6cards in flex as well ************/
+.advantage_cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.advantage_card {
+  width: 300px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  position: relative;
+  border-radius: 10px;
+  z-index: 2;
+}
+.advantage_card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 230, 0, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  );
+  z-index: -2;
+}
+.advantage_card:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 97%;
+  height: 95%;
+  border-radius: 10px;
+  background: #1f1e1d;
+  z-index: -1;
+}
+.advantage_card h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+.advantage_card p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.advantage_card:nth-child(1) p {
+  color: var(--second-color);
+}
+
+.advantage_card:nth-child(2) p {
+  color: var(--prime-color);
+}
+
+.advantage_card:nth-child(3) p {
+  color: #d73a26;
+}
+
+.advantage_card:nth-child(4) p {
+  color: #f1651a;
+}
+
+.advantage_card:nth-child(5) p {
+  color: var(--third-color);
+}
+
+.advantage_card:nth-child(6) p {
+  color: #ad08cc;
+}
+
+.advantage_card:nth-child(2):after {
+  background: linear-gradient(
+    180deg,
+    rgba(89, 195, 120, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(3):after {
+  background: linear-gradient(
+    180deg,
+    rgba(221, 88, 79, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(4):after {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 154, 0, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(5):after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 169, 255, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(6):after {
+  background: linear-gradient(
+    180deg,
+    rgba(158, 0, 255, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+
+.advantage_card:nth-child(1):hover h2 {
+  color: var(--second-color);
+}
+.advantage_card:nth-child(2):hover h2 {
+  color: var(--prime-color);
+}
+.advantage_card:nth-child(3):hover h2 {
+  color: #d73a26;
+}
+.advantage_card:nth-child(4):hover h2 {
+  color: #f1651a;
+}
+.advantage_card:nth-child(5):hover h2 {
+  color: var(--third-color);
+}
+.advantage_card:nth-child(6):hover h2 {
+  color: #ad08cc;
+}
+
+.adv_shape {
+  position: absolute;
+  z-index: -1;
+}
+
+.adv_shape1 {
+  top: 10%;
+  left: -10%;
+  width: 40%;
+}
+
+.adv_shape2 {
+  top: 10%;
+  right: 0%;
+  width: 40%;
+}
+
+.adv_shape3 {
+  bottom: -30%;
+  left: 0%;
+  width: 42%;
+  opacity: 0.7;
+}
+
+.adv_shape4 {
+  top: 10%;
+  right: 0%;
+  width: 40%;
+}
+/* End advantages cards 6cards in flex as well ************/
+
+/* End STYLING THE ADVANTAGE SECTION ****************/
+/* START STYLIiNG SERVICES SEC **********************/
+.services {
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #222121;
+}
+
+.service_shape {
+  position: absolute;
+  top: 15%;
+  right: -10%;
+  width: 40%;
+  opacity: 0.4;
+}
+
+.service_shape2 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 40%;
+  opacity: 0.2;
+}
+.headings {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.headings h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+.headings p {
+  font-size: 1rem;
+  font-weight: 300;
+  width: 80%;
+}
+/* start sTyling the services section btns2 ***************/
+
+.service_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.btn2 {
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+  background-color: #373737;
+  color: var(--white-color);
+}
+.btn2:active,
+.btn2:focus {
+  background-color: transparent;
+  color: var(--second-color);
+  border: 1px solid var(--white-color);
+}
+.btn:hover {
+  transform: scale(1);
+}
+
+/* End sTyling the services section btns2 ***************/
+/* STYLING SERVICES CARD 1 in GRID*********************/
+
+.services_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service_container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+/* le conteneur est en grid mais le contenu des cards sont en fleX */
+.service_card {
+  background-color: #232221;
+  width: 400px !important; /*!important si nécessaire*/
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(131, 131, 131, 0.5);
+}
+
+.service_card .service_icon {
+  font-size: 3.5rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #373737;
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.service_card:hover .service_icon {
+  background-color: var(--prime-color);
+  color: var(--white-color);
+}
+
+.service_card h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.service_card p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.service_card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service_card a {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.service_card a i {
+  font-size: 1.2rem;
+}
+.service_card a:hover {
+  color: var(--second-color);
+  letter-spacing: 2px;
+}
+/* End Styling SERVICES CARD 1 in GRID****************/
+
+.service_2,
+.service_3 {
+  display: none;
+}
+
+/* Start Work EXPERIENCE SEC **************************-->*/
+.work_experience {
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.work_box_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.work_box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+  background-color: #282828;
+  padding: 1.2% 0%;
+  border: 1px solid transparent;
+}
+
+.work_box h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.work_box_img {
+  width: 80px;
+  height: 80px;
+}
+
+.work_det {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.work_det {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.work_det h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.work_det p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #d73a26;
+}
+
+.work_det p span {
+  color: #999;
+}
+
+.work_box a {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.work_box a i {
+  font-size: 1.2rem;
+}
+.work_box a:hover {
+  color: var(--second-color);
+  letter-spacing: 2px;
+}
+
+.work_box:hover {
+  border: 1px solid rgba(131, 131, 131, 0.5);
+}
+.work_shape {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 850px;
+  opacity: 0.2;
+  z-index: -1;
+}
+/* End Styling Work EXPERIENCE SEC **************************-->*/
+/* End styling services SEC *************************/
+
+/* Start Styling Recent Work SEC ********************/
+.recent_work {
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 5% 12%;
+}
+.headings2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.head_content h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+.head_content p {
+  width: 80%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.heading2 i {
+  font-size: 3.5rem;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  background-color: #373737;
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  position: relative;
+}
+
+.heading2 i:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105%;
+  height: 105%;
+  border: 2px dashed rgba(131, 131, 131, 0.5);
+  border-radius: 100%;
+}
+/* End Styling Recent Work SEC **********************/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+}
+
+:root {
+  --prime-color: #55c175;
+  --prime-dark-color: #42b463;
+  --second-color: #ffe600;
+  --third-color: #4bc7eb;
+  --black-color: #000;
+  --white-color: #fff;
+  --body-color: #191919;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--white-color);
+  overflow-x: hidden;
+}
+
+/* ReUsable SECTION class *******************/
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 8%;
+}
+img {
+  height: 100%;
+}
+
+/* START STYLING THE NAV*****************************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  width: 100%;
+  height: 90px;
+}
+
+.bars {
+  width: 50px;
+  width: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--prime-color);
+  color: var(--white-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+
+.bars:hover {
+  transform: scale(0.8);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.logo a {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu li a {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  position: relative;
+  transition: 0.3s;
+}
+
+.menu li a::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--prime-color);
+  transition: 0.3s;
+}
+
+.menu li:hover a:after {
+  width: 100%;
+}
+
+.menu li:hover a {
+  color: var(--prime-color);
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--prime-color);
+  color: var(--white-color);
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button i {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:hover i {
+  transform: rotate(180deg);
+}
+
+.download-button {
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: medium;
+}
+/* End STYLING THE NAV*******************************/
+
+/* START STYLING THE Hero Sec*******************************/
+.hero {
+  width: 90%; /*adjustable*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.6% 8%;
+  position: relative;
+  /* overflow: hidden; */
+}
+.content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.content h2 {
+  font-size: 4rem;
+  color: var(--second-color);
+  font-weight: 600;
+  line-height: 4.3rem;
+}
+
+.content h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 6.5rem;
+}
+
+.content h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3.3rem;
+  color: var(--prime-color);
+}
+
+.content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 80%;
+  margin: 20px 0;
+}
+
+.image {
+  width: 40%;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.image img {
+  border-radius: 20%;
+  object-fit: contain;
+}
+
+.det_box {
+  position: absolute;
+  top: 70%;
+  left: -0;
+  width: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.det_box i {
+  font-size: 3rem;
+  color: var(--prime-color);
+}
+
+.det_box_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.det_box_info h2 {
+  font-weight: 500;
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 30px !important;
+  background-color: var(--white-color);
+  padding: 15px;
+}
+
+.elem1 {
+  top: 8%;
+  left: 15%;
+}
+
+.elem2 {
+  top: 5%;
+  right: -50%;
+}
+
+.elem3 {
+  top: 70%;
+  right: -40%;
+}
+
+/* hero backgrounds shapes ****************/
+.shape1 {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 30%;
+  z-index: -1;
+}
+
+.shape2 {
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  width: 70%;
+  z-index: -1;
+}
+
+.shape1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  z-index: -1;
+}
+
+.shape3 {
+  border-radius: 50% !important;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 720px;
+  opacity: 0.16;
+  z-index: -1;
+}
+
+.shape4 {
+  position: absolute;
+  top: -10%;
+  left: 80%;
+  width: 800px;
+  height: 600px;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.shape5 {
+  position: absolute;
+  top: 20%;
+  left: +43%;
+  height: 580px;
+  opacity: 0.04;
+  z-index: 1;
+}
+/* End STYLING THE Hero Sec*******************************/
+/* Start STYLING THE ADVANTAGE SECTION **************/
+.my_advantage {
+  width: 100%;
+  justify-content: space-between;
+  padding: 8%;
+}
+
+.advantage_exp {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #2e2c1f, #1b1b19);
+  width: 400px;
+  height: 450px;
+  border-radius: 10px;
+}
+.exp_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 25%;
+}
+.exp_box h1 {
+  font-size: 8rem;
+  font-weight: 500;
+  color: var(--second-color);
+}
+.exp_box p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.exp_small_box {
+  width: 350px;
+  padding: 7%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+  top: 35%;
+  left: 20%;
+}
+
+.exp_small_box:after {
+  border-radius: 5px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #939393a1, rgba(28, 26, 26, 0.3));
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.exp_small_box:before {
+  border-radius: 5px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  background-color: #2d2b1f;
+  z-index: -1;
+}
+
+.exp_small_box h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--prime-color);
+}
+.exp_small_box p {
+  font-weight: 500;
+}
+.advantage_content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.advantage_content h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.advantage_content p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  width: 80%;
+}
+/* Start advantages cards 6cards in flex as well ************/
+.advantage_cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.advantage_card {
+  width: 300px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  position: relative;
+  border-radius: 10px;
+  z-index: 2;
+}
+.advantage_card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 230, 0, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  );
+  z-index: -2;
+}
+.advantage_card:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 97%;
+  height: 95%;
+  border-radius: 10px;
+  background: #1f1e1d;
+  z-index: -1;
+}
+.advantage_card h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+.advantage_card p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.advantage_card:nth-child(1) p {
+  color: var(--second-color);
+}
+
+.advantage_card:nth-child(2) p {
+  color: var(--prime-color);
+}
+
+.advantage_card:nth-child(3) p {
+  color: #d73a26;
+}
+
+.advantage_card:nth-child(4) p {
+  color: #f1651a;
+}
+
+.advantage_card:nth-child(5) p {
+  color: var(--third-color);
+}
+
+.advantage_card:nth-child(6) p {
+  color: #ad08cc;
+}
+
+.advantage_card:nth-child(2):after {
+  background: linear-gradient(
+    180deg,
+    rgba(89, 195, 120, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(3):after {
+  background: linear-gradient(
+    180deg,
+    rgba(221, 88, 79, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(4):after {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 154, 0, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(5):after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 169, 255, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+.advantage_card:nth-child(6):after {
+  background: linear-gradient(
+    180deg,
+    rgba(158, 0, 255, 0.6),
+    rgba(31, 30, 28, 0.6) 67.59%
+  ) !important;
+}
+
+.advantage_card:nth-child(1):hover h2 {
+  color: var(--second-color);
+}
+.advantage_card:nth-child(2):hover h2 {
+  color: var(--prime-color);
+}
+.advantage_card:nth-child(3):hover h2 {
+  color: #d73a26;
+}
+.advantage_card:nth-child(4):hover h2 {
+  color: #f1651a;
+}
+.advantage_card:nth-child(5):hover h2 {
+  color: var(--third-color);
+}
+.advantage_card:nth-child(6):hover h2 {
+  color: #ad08cc;
+}
+
+.adv_shape {
+  position: absolute;
+  z-index: -1;
+}
+
+.adv_shape1 {
+  top: 10%;
+  left: -10%;
+  width: 40%;
+}
+
+.adv_shape2 {
+  top: 10%;
+  right: 0%;
+  width: 40%;
+}
+
+.adv_shape3 {
+  bottom: -30%;
+  left: 0%;
+  width: 42%;
+  opacity: 0.7;
+}
+
+.adv_shape4 {
+  top: 10%;
+  right: 0%;
+  width: 40%;
+}
+/* End advantages cards 6cards in flex as well ************/
+
+/* End STYLING THE ADVANTAGE SECTION ****************/
+/* START STYLIiNG SERVICES SEC **********************/
+.services {
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #222121;
+}
+
+.service_shape {
+  position: absolute;
+  top: 15%;
+  right: -10%;
+  width: 40%;
+  opacity: 0.4;
+}
+
+.service_shape2 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 40%;
+  opacity: 0.2;
+}
+.headings {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.headings h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+.headings p {
+  font-size: 1rem;
+  font-weight: 300;
+  width: 80%;
+}
+/* start sTyling the services section btns2 ***************/
+
+.service_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.btn2 {
+  width: 200px;
+  height: 60px;
+  font-size: 1.5rem;
+  background-color: #373737;
+  color: var(--white-color);
+}
+.btn2:active,
+.btn2:focus {
+  background-color: transparent;
+  color: var(--second-color);
+  border: 1px solid var(--white-color);
+}
+.btn:hover {
+  transform: scale(1);
+}
+
+/* End sTyling the services section btns2 ***************/
+/* STYLING SERVICES CARD 1 in GRID*********************/
+
+.services_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service_container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+/* le conteneur est en grid mais le contenu des cards sont en fleX */
+.service_card {
+  background-color: #232221;
+  width: 400px !important; /*!important si nécessaire*/
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(131, 131, 131, 0.5);
+}
+
+.service_card .service_icon {
+  font-size: 3.5rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #373737;
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.service_card:hover .service_icon {
+  background-color: var(--prime-color);
+  color: var(--white-color);
+}
+
+.service_card h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.service_card p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.service_card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service_card a {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.service_card a i {
+  font-size: 1.2rem;
+}
+.service_card a:hover {
+  color: var(--second-color);
+  letter-spacing: 2px;
+}
+/* End Styling SERVICES CARD 1 in GRID****************/
+
+.service_2,
+.service_3 {
+  display: none;
+}
+
+/* Start Work EXPERIENCE SEC **************************-->*/
+.work_experience {
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.work_box_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.work_box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+  background-color: #282828;
+  padding: 1.2% 0%;
+  border: 1px solid transparent;
+}
+
+.work_box h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.work_box_img {
+  width: 80px;
+  height: 80px;
+}
+
+.work_det {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.work_det {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.work_det h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.work_det p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #d73a26;
+}
+
+.work_det p span {
+  color: #999;
+}
+
+.work_box a {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.work_box a i {
+  font-size: 1.2rem;
+}
+.work_box a:hover {
+  color: var(--second-color);
+  letter-spacing: 2px;
+}
+
+.work_box:hover {
+  border: 1px solid rgba(131, 131, 131, 0.5);
+}
+.work_shape {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 850px;
+  opacity: 0.2;
+  z-index: -1;
+}
+/* End Styling Work EXPERIENCE SEC **************************-->*/
+/* End styling services SEC *************************/
+
+/* Start Styling Recent Work SEC ********************/
+.recent_work {
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 5% 12%;
+}
+.heading2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.head_content h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+.head_content p {
+  width: 80%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.heading2 i {
+  font-size: 3.5rem;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  background-color: #373737;
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  position: relative;
+}
+
+.heading2 i:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105%;
+  height: 105%;
+  border: 2px dashed rgba(131, 131, 131, 0.5);
+  border-radius: 100%;
+}
+/* End Styling Recent Work SEC **********************/
