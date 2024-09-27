@@ -838,6 +838,7 @@ button:hover i {
   width: 100%;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
   padding: 5% 12%;
 }
 .headings2 {
@@ -2663,6 +2664,11 @@ button:hover i {
   transition: 0.3s;
   position: relative;
 }
+.heading2 i:hover {
+  background-color: var(--second-color);
+  color: white;
+  cursor: pointer;
+}
 
 .heading2 i:after {
   content: '';
@@ -2675,4 +2681,101 @@ button:hover i {
   border: 2px dashed rgba(131, 131, 131, 0.5);
   border-radius: 100%;
 }
+
+/* Start Styling the RecentWork SLIDER *************/
+
+.RecentWorkSwiper {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.slide_img {
+  width: 450px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.slide:hover .slide_img {
+  transform: scale(1.07);
+}
+
+.slide_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.slide_content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.slide_content h2:hover {
+  color: var(--prime-color);
+  cursor: pointer;
+}
+.slide_content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #999;
+}
+
+/* l'effet background derrière le slider */
+.recent_work_shape {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+.swiper_btn {
+  position: absolute !important;
+  top: 96% !important;
+  left: 45% !important;
+}
+
+.swiper_btn_right {
+  left: 50% !important;
+}
+
+.swiper_btn i {
+  font-size: 2rem;
+  color: var(--prime-color);
+  height: 50px;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--prime-color);
+  transition: 0.2s;
+}
+
+.swiper_btn i:hover {
+  background-color: var(--prime-color);
+  color: var(--white-color);
+}
+/* End Styling the RecentWork SLIDER *************/
 /* End Styling Recent Work SEC **********************/

@@ -23,3 +23,14 @@ serviceLink3.addEventListener('click', () => {
   serviceCard2.style.display = 'none';
   serviceCard3.style.display = 'flex';
 });
+
+let swiper = new Swiper('.RecentWorkSwiper', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
